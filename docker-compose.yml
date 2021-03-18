@@ -1,0 +1,43 @@
+version: '3.1'
+
+services:
+  selenium-hub:
+    image: "selenium/hub:3.141.59"
+    container_name: "selenium_hub"
+    ports:
+      - "4444:4444"
+    environment:
+      GRID_MAX_SESSION: 16
+      GRID_BROWSER_TIMEOUT: 60
+      GRID_TIMEOUT: 3000
+    networks:
+      - grid
+    
+  firefox-debug:
+    image: "selenium/node-firefox-debug:3.141.59"
+    depends_on:
+      - selenium-hub
+    container_name: "firefox-debug"
+    ports:
+      - "5901:5900"
+    networks:
+      - grid
+    environment:
+      HUB_HOST: selenium-hub
+      NODE_MAX_INSTANCES: 1
+  
+  chrome-debug:
+    image: "selenium/node-chrome-debug:3.141.59"
+    depends_on:
+      - selenium-hub
+    container_name: "chrome-debug"
+    ports:
+      - "5902:5900"
+    networks:
+      - grid
+    environment:
+      HUB_HOST: selenium-hub
+      NODE_MAX_INSTANCES: 1
+
+networks:
+  grid:
