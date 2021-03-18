@@ -1,10 +1,10 @@
-# Task page mapper
+# Task page map
 
 All page interactions mapped to code.
 
 ## About
 
-This project is an implementation of Page Object Model (POM) design pattern. It was created by using Selenium to map all page iterables into a Domain-specific language (DML). 
+This project is an implementation of Page Object Model (POM) design pattern. It was created by using Selenium to map all page iterables into a Domain-specific language (DSL).
 
 The DML is used as a interface of interaction between the browser webdriver and the code to manipulate the browser itself and the page iterables.
 
