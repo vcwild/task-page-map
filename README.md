@@ -32,7 +32,7 @@ pip install -r requirements.txt
 poetry install
 ```
 
-## Testing using BDD
+## Testing
 
 To apply tests you will need *Selenium Hub* and a remote browser instance.
 
@@ -42,10 +42,20 @@ Simply run:
 docker-compose up -d
 ```
 
-and then
+### Testing using pytest
+
+To use pytest for testing, in the project root simply run
 
 ```sh
 pytest -v $(pwd)/tests/test_page_mapper.py
+```
+
+### Testing using Behave BDD
+
+In the project root simply execute:
+
+```sh
+behave src/features -D debug=True
 ```
 
 ## References
