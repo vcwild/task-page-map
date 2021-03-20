@@ -24,7 +24,7 @@ services:
       - grid
     environment:
       HUB_HOST: selenium-hub
-      NODE_MAX_INSTANCES: 1
+      NODE_MAX_INSTANCES: 2
   
   chrome-debug:
     image: "selenium/node-chrome-debug:3.141.59"
@@ -37,7 +37,7 @@ services:
       - grid
     environment:
       HUB_HOST: selenium-hub
-      NODE_MAX_INSTANCES: 1
+      NODE_MAX_INSTANCES: 2
 
 networks:
   grid:
