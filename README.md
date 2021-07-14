@@ -6,7 +6,7 @@ All page interactions mapped to code.
 
 This project is an implementation of Page Object Model (POM) design pattern. It was created by using Selenium to map all page iterables into a Domain-specific language (DSL).
 
-The DML is used as a interface of interaction between the browser webdriver and the code to manipulate the browser itself and the page iterables.
+The DSL is used as an interface of interaction between the browser webdriver and the code to manipulate the browser itself and the page iterables.
 
 POM design pattern is generally used in test automation for enhancing code quality and maintentance.
 
